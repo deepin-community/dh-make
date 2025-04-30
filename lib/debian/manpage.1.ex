@@ -38,7 +38,7 @@ commands.
 \fB#PACKAGE#\fP is a program that...
 .SH OPTIONS
 These programs follow the usual GNU command line syntax, with long
-options starting with two dashes (`-').
+options starting with two dashes ('\-').
 A summary of options is included below.
 For a complete description, see the Info files.
 .TP

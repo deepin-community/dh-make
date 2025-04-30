@@ -9,7 +9,7 @@
           -''-param make.year.ranges "1" \
           -''-param make.single.year.ranges "1" \
           /usr/share/xml/docbook/stylesheet/docbook-xsl/manpages/docbook.xsl \
-          manpage.xml'
+          manpage.xml`
 
 A manual page <package>.<section> will be generated. You may view the
 manual page with: nroff -man <package>.<section> | less'. A typical entry
@@ -159,7 +159,7 @@ man(1), man(7), http://www.tldp.org/HOWTO/Man-Page/
   <refsect1 id="options">
     <title>OPTIONS</title>
     <para>The program follows the usual GNU command line syntax,
-      with long options starting with two dashes (`-').  A summary of
+      with long options starting with two dashes ('-').  A summary of
       options is included below.  For a complete description, see the
       <citerefentry>
         <refentrytitle>info</refentrytitle>
@@ -270,7 +270,7 @@ man(1), man(7), http://www.tldp.org/HOWTO/Man-Page/
   </refsect1>
   <refsect1 id="see_also">
     <title>SEE ALSO</title>
-    <!-- In alpabetical order. -->
+    <!-- In alphabetical order. -->
     <para><citerefentry>
         <refentrytitle>bar</refentrytitle>
         <manvolnum>1</manvolnum>
@@ -288,4 +288,3 @@ man(1), man(7), http://www.tldp.org/HOWTO/Man-Page/
       </citerefentry> system.</para>
   </refsect1>
 </refentry>
-
