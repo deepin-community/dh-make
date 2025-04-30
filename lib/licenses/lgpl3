@@ -1,15 +1,19 @@
 Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Source: <url://example.com>
 Upstream-Name: #PACKAGE#
 Upstream-Contact: <preferred name and address to reach the upstream project>
-Source: <url://example.com>
 
-Files: *
-Copyright: <years> <put author's name and email here>
-           <years> <likewise for another author>
+Files:
+ *
+Copyright:
+ <years> <put author's name and email here>
+ <years> <likewise for another author>
 License: LGPL-3.0+
 
-Files: debian/*
-Copyright: #YEAR# #USERNAME# <#EMAIL#>
+Files:
+ debian/*
+Copyright:
+ #YEAR# #USERNAME# <#EMAIL#>
 License: LGPL-3.0+
 
 License: LGPL-3.0+
@@ -24,8 +28,8 @@ License: LGPL-3.0+
  Lesser General Public License for more details.
  .
  You should have received a copy of the GNU Lesser General Public License
- along with this program. If not, see <https://www.gnu.org/licenses/>.
- .
+ along with this package. If not, see <https://www.gnu.org/licenses/>.
+Comment:
  On Debian systems, the complete text of the GNU Lesser General
  Public License can be found in "/usr/share/common-licenses/LGPL-3".
 

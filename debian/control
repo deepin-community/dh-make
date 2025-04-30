@@ -2,20 +2,31 @@ Source: dh-make
 Section: devel
 Priority: optional
 Maintainer: Craig Small <csmall@debian.org>
-Uploaders: Baptiste Beauplat <lyknode@debian.org>
-Build-Depends: debhelper-compat (= 13), dh-python, python3-all, dh-exec,
-               python3-pytest
-Standards-Version: 4.6.0
+Uploaders:
+ Baptiste Beauplat <lyknode@debian.org>,
+Rules-Requires-Root: no
+Build-Depends:
+ debhelper-compat (= 13),
+ dh-exec,
+ dh-sequence-python3,
+ python3-all,
+ python3-pytest,
+Standards-Version: 4.7.2
 Vcs-Browser: https://salsa.debian.org/debian/dh-make
 Vcs-Git: https://salsa.debian.org/debian/dh-make.git
 Homepage: https://salsa.debian.org/debian/dh-make
-Rules-Requires-Root: no
 
 Package: dh-make
 Architecture: all
-Depends: debhelper (>= 13.1), make, ${python3:Depends}, dpkg-dev,
-         ${misc:Depends}
-Suggests: build-essential
+Multi-Arch: foreign
+Depends:
+ debhelper (>= 13.1),
+ dpkg-dev,
+ make,
+ ${misc:Depends},
+ ${python3:Depends},
+Suggests:
+ build-essential,
 Description: tool that converts source archives into Debian package source
  This package allows you to take a standard (or upstream) source package
  and convert it into a format that will allow you to build Debian packages.

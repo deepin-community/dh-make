@@ -1,19 +1,23 @@
 Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Source: <url://example.com>
 Upstream-Name: #PACKAGE#
 Upstream-Contact: <preferred name and address to reach the upstream project>
-Source: <url://example.com>
 
-Files: *
-Copyright: <years> <put author's name and email here>
-           <years> <likewise for another author>
+Files:
+ *
+Copyright:
+ <years> <put author's name and email here>
+ <years> <likewise for another author>
 License: GPL-3.0+
 
-Files: debian/*
-Copyright: #YEAR# #USERNAME# <#EMAIL#>
+Files:
+ debian/*
+Copyright:
+ #YEAR# #USERNAME# <#EMAIL#>
 License: GPL-3.0+
 
 License: GPL-3.0+
- This program is free software: you can redistribute it and/or modify
+ This package is free software: you can redistribute it and/or modify
  it under the terms of the GNU General Public License as published by
  the Free Software Foundation, either version 3 of the License, or
  (at your option) any later version.
@@ -24,8 +28,8 @@ License: GPL-3.0+
  GNU General Public License for more details.
  .
  You should have received a copy of the GNU General Public License
- along with this program. If not, see <https://www.gnu.org/licenses/>.
- .
+ along with this package. If not, see <https://www.gnu.org/licenses/>.
+Comment:
  On Debian systems, the complete text of the GNU General
  Public License version 3 can be found in "/usr/share/common-licenses/GPL-3".
 

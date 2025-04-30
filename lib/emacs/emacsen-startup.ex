@@ -1,11 +1,11 @@
 ;; -*-emacs-lisp-*-
 ;;
-;; Emacs startup file, e.g.  /etc/emacs/site-start.d/50#PACKAGE#.el
-;; for the Debian #PACKAGE# package
+;; Emacs startup file, e.g. /etc/emacs/site-start.d/50#PACKAGE#.el
+;; for the Debian #PACKAGE# package.
 ;;
 ;; Originally contributed by Nils Naumann <naumann@unileoben.ac.at>
-;; Modified by Dirk Eddelbuettel <edd@debian.org>
-;; Adapted for dh-make by Jim Van Zandt <jrv@debian.org>
+;; Modified by Dirk Eddelbuettel <edd@debian.org>.
+;; Adapted for dh-make by Jim Van Zandt <jrv@debian.org>.
 
 ;; The #PACKAGE# package follows the Debian/GNU Linux 'emacsen' policy and
 ;; byte-compiles its elisp files for each 'emacs flavor' (emacs19,
@@ -24,4 +24,3 @@
     (autoload '#PACKAGE#-mode "#PACKAGE#-mode"
       "Major mode for editing #PACKAGE# files." t)
     (add-to-list 'auto-mode-alist '("\\.#PACKAGE#$" . #PACKAGE#-mode))))
-

@@ -1,3 +1,151 @@
+dh-make (2.202503) unstable; urgency=medium
+
+  [ Otto Kekäläinen ]
+  * Add a gbp.conf example
+
+ -- Baptiste Beauplat <lyknode@debian.org>  Sun, 30 Mar 2025 14:19:07 +0200
+
+dh-make (2.202502) unstable; urgency=medium
+
+  * Suffix all templates files not strictly required to .ex
+  * Bump templates Standards-Version to 4.7.2
+  * Bump Standards-Version to 4.7.2
+
+ -- Baptiste Beauplat <lyknode@debian.org>  Sun, 09 Mar 2025 14:06:26 +0100
+
+dh-make (2.202501) unstable; urgency=medium
+
+  [ Otto Kekäläinen ]
+  * Include --createorig in man page section about command options
+  * Fix minor typos
+  * Extend dh_make.1 to also mention the --emacs and --python options
+  * Include a generic .gitignore example in the base debian/ template
+  * Clean away trailing spaces
+  * Format Python files with Black and keeping line length under 80
+  * Fix escape sequences and properly use r"" in Python regex strings
+
+  [ Baptiste Beauplat ]
+  * Fix formatting in man for --createorig option
+  * Bump templates Standards-Version to 4.7.1
+  * Bump Standards-Version to 4.7.1
+
+  [ Andrew Kreimer ]
+  * Fix typos
+
+ -- Baptiste Beauplat <lyknode@debian.org>  Sun, 23 Feb 2025 10:07:27 +0100
+
+dh-make (2.202402) unstable; urgency=medium
+
+  [ Sean Bright ]
+  * Add missing internal spaces to some error messages.
+
+  [ Baptiste Beauplat ]
+  * Remove 'Multi-Arch: foreign' from non-lib debian/control (Closes: #1071975)
+
+ -- Baptiste Beauplat <lyknode@debian.org>  Mon, 27 May 2024 20:48:54 +0200
+
+dh-make (2.202401) unstable; urgency=medium
+
+  [ Marcos Talau ]
+  * lib/licenses/*: Replace "program" to "package".
+
+  [ Baptiste Beauplat ]
+  * Bump Standards-Version to 4.7.0
+  * Bump templates Standards-Version to 4.7.0
+
+ -- Baptiste Beauplat <lyknode@debian.org>  Sun, 07 Apr 2024 10:34:29 +0200
+
+dh-make (2.202304) unstable; urgency=medium
+
+  * Add lowdown as an alternative to pandoc (Closes: #1055864)
+
+ -- Baptiste Beauplat <lyknode@debian.org>  Tue, 19 Dec 2023 19:48:15 +0100
+
+dh-make (2.202303) unstable; urgency=medium
+
+  [ Diederik de Haas ]
+  * ci: Switch to Salsa's debian recipe
+
+ -- Baptiste Beauplat <lyknode@debian.org>  Mon, 30 Oct 2023 19:20:59 +0100
+
+dh-make (2.202302) unstable; urgency=medium
+
+  * Add 'Multi-Arch: foreign' to non-lib debian/control (Closes: #1040542)
+  * Drop nis support (deprecated from python)
+  * Mark dh-make binary as Multi-Arch: foreign
+
+ -- Baptiste Beauplat <lyknode@debian.org>  Thu, 03 Aug 2023 21:41:54 +0200
+
+dh-make (2.202301) unstable; urgency=medium
+
+  [ David Stonecypher ]
+  * fixes a case of --templates flag
+
+ -- Baptiste Beauplat <lyknode@debian.org>  Sun, 05 Feb 2023 09:56:40 +0100
+
+dh-make (2.202205) unstable; urgency=medium
+
+  * Bump Standards-Version to 4.6.2
+  * Bump templates Standards-Version to 4.6.2
+
+ -- Baptiste Beauplat <lyknode@debian.org>  Tue, 27 Dec 2022 22:05:32 +0100
+
+dh-make (2.202204) unstable; urgency=medium
+
+  [ Gioele Barabucci ]
+  * lib/debian/watch: Align GitHub and GitLab patterns.
+  * lib/debian/watch: Use a single backreference in filenamemangle
+  * lib/debian/watch: Regularize indentation and first lines
+  * lib/debian/watch: Drop `debian uupdate`
+  * lib/debian/watch: Drop GooglePages example
+
+ -- Baptiste Beauplat <lyknode@debian.org>  Sun, 16 Oct 2022 10:03:05 +0200
+
+dh-make (2.202203) unstable; urgency=medium
+
+  * Fix dash in example manpage (Closes: #1016412)
+  * Fix lintian overrides:
+    - Fix filenames
+    - Use wildcard to regroup files
+  * Fix CMakeLists.txt filename case (Closes: #1019968)
+
+ -- Baptiste Beauplat <lyknode@debian.org>  Sat, 17 Sep 2022 17:39:05 +0200
+
+dh-make (2.202202) unstable; urgency=medium
+
+  * Only create directory if not already present (Closes: #1014733)
+
+ -- Baptiste Beauplat <lyknode@debian.org>  Mon, 11 Jul 2022 19:32:22 +0200
+
+dh-make (2.202201) unstable; urgency=medium
+
+  [ Craig Small ]
+  * Make doc build arch-indep Closes: #996245
+
+  [ Gioele Barabucci ]
+  * watch.ex: Add pattern for GitLab
+
+  [ Guillem Jover ]
+  * Add a debian/.gitignore file
+  * Remove empty debian/examples
+  * Move license location on Debian systems into a Comment field
+  * Use BSD-3-clause instead of BSD-3-Clause
+  * Fix spacing issues in dh_make(1)
+  * Mark a replaceable text within <>
+  * Capitalize and terminate sentences with a dot
+  * Do not use unbalanced single quotes
+  * Wrap and sort -ast
+  * Use dh-sequence-python3 instead of dh-python and --with=python3
+
+  [ Baptiste Beauplat ]
+  * Bump Standards-Version to 4.6.1: no changes
+  * Bump templates Standards-Version to 4.6.1
+  * Fix subdirectory support for file in dhlib directory
+  * Add metadata example file (Closes: #995616)
+  * Fix typo in changelog
+
+ -- Baptiste Beauplat <lyknode@debian.org>  Fri, 13 May 2022 14:32:28 +0200
+
 dh-make (2.202102) unstable; urgency=medium
 
   * Make initial release UNRELEASED Closes: #963117
@@ -16,8 +164,8 @@ dh-make (2.202101) unstable; urgency=medium
 
   [ Baptiste Beauplat ]
   * Rename package.doc-base.EX to unify *.ex files naming convention
-  * Bump Standard-Version to 4.6.0: no changes
-  * Bump templates Standard-Version to 4.6.0
+  * Bump Standards-Version to 4.6.0: no changes
+  * Bump templates Standards-Version to 4.6.0
   * Update my email in d/control
 
  -- Baptiste Beauplat <lyknode@debian.org>  Wed, 25 Aug 2021 19:57:27 +0200
@@ -25,8 +173,8 @@ dh-make (2.202101) unstable; urgency=medium
 dh-make (2.202003) unstable; urgency=medium
 
   [ Baptiste Beauplat ]
-  * Bump Standard-Version to 4.5.1: no changes
-  * Bump templates Standard-Version to 4.5.1
+  * Bump Standards-Version to 4.5.1: no changes
+  * Bump templates Standards-Version to 4.5.1
   * Cleanup leftover build cache directories
   * Adjust my last name in d/control
   * Remove trailing spaces in d/copyright

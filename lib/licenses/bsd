@@ -1,18 +1,22 @@
 Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Source: <url://example.com>
 Upstream-Name: #PACKAGE#
 Upstream-Contact: <preferred name and address to reach the upstream project>
-Source: <url://example.com>
 
-Files: *
-Copyright: <years> <put author's name and email here>
-           <years> <likewise for another author>
-License: BSD-3-Clause
+Files:
+ *
+Copyright:
+ <years> <put author's name and email here>
+ <years> <likewise for another author>
+License: BSD-3-clause
 
-Files: debian/*
-Copyright: #YEAR# #USERNAME# <#EMAIL#>
-License: BSD-3-Clause
+Files:
+ debian/*
+Copyright:
+ #YEAR# #USERNAME# <#EMAIL#>
+License: BSD-3-clause
 
-License: BSD-3-Clause
+License: BSD-3-clause
  Redistribution and use in source and binary forms, with or without
  modification, are permitted provided that the following conditions
  are met:

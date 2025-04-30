@@ -7,21 +7,29 @@
 [comment]: # See https://pandoc.org/MANUAL.html#metadata-blocks for details.
 
 [comment]: # pandoc -s -f markdown -t man package.md -o package.1
-[comment]: # 
+[comment]: #
 [comment]: # A manual page package.1 will be generated. You may view the
 [comment]: # manual page with: nroff -man package.1 | less. A typical entry
 [comment]: # in a Makefile or Makefile.am is:
-[comment]: # 
+[comment]: #
 [comment]: # package.1: package.md
 [comment]: #         pandoc --standalone --from=markdown --to=man $< --output=$@
-[comment]: # 
+[comment]: #
 [comment]: # The pandoc binary is found in the pandoc package. Please remember
 [comment]: # that if you create the nroff version in one of the debian/rules
 [comment]: # file targets, such as build, you will need to include pandoc in
 [comment]: # your Build-Depends control field.
 
-[comment]: # Remove the lines starting with `[comment]:' in this file in order
-[comment]: # to avoid warning messages from pandoc.
+[comment]: # lowdown is a low dependency, lightweight alternative to
+[comment]: # pandoc as a markdown to manpage translator. Use with:
+[comment]: #
+[comment]: # package.1: package.md
+[comment]: #         lowdown -s -Tman -o $@ $<
+[comment]: #
+[comment]: # And add lowdown to the Build-Depends control field.
+
+[comment]: # Remove the lines starting with '[comment]:' in this file in order
+[comment]: # to avoid warning messages.
 
 # NAME
 
@@ -47,7 +55,7 @@ in the GNU info(1) format; see below.
 # OPTIONS
 
 The program follows the usual GNU command line syntax, with long options
-starting with two dashes (`-'). A summary of options is included below. For
+starting with two dashes ('-'). A summary of options is included below. For
 a complete description, see the **info**(1) files.
 
 **-e** _this_, **\-\-example=**_that_

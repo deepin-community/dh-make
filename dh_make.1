@@ -4,7 +4,7 @@
 .\" the Free Software Foundation; either version 3 of the License, or
 .\" (at your option) any later version.
 .\"
-.TH DH_MAKE 1 2021-09-21 "Debian Project"
+.TH DH_MAKE 1 2025-02-15 "Debian Project"
 .SH NAME
 dh_make \- prepare upstream source for Debian packaging
 .SH SYNOPSIS
@@ -23,9 +23,9 @@ must be all lowercase,
 digits and dashes. The <version> can also contain digits, and the symbols
 plus, dot, tilde. The <version> must start with a digit.
 If the directory name does not conform to this scheme,
-you must rename it before using 
+you must rename it before using
 .B dh_make.
-Alternatively, you may be able to use the \fB\-\-packagename\fR option to force 
+Alternatively, you may be able to use the \fB\-\-packagename\fR option to force
 the package name.
 .br
 .SS PACKAGE CLASSES
@@ -45,7 +45,7 @@ containing just the lib in \fI/usr/lib\fR and another *\-dev_*.deb package
 containing documentation and C headers.
 .TP
 .SS ACTIONS PERFORMED
-Unless \fB\-\-native\fR was given, 
+Unless \fB\-\-native\fR was given,
 .B dh_make
 makes sure a original source archive (<packagename>_<version>.orig.tar.gz)
 exists. The archive can either end with .gz or one of the other supported
@@ -66,7 +66,7 @@ files in the program source directory. Those control files are customized
 with the packagename and version extracted from the directory name.
 
 .B dh_make
-makes several attempts to obtain the username. It first checks for the 
+makes several attempts to obtain the username. It first checks for the
 environment variables \fB$DEBFULLNAME\fR, \fB$LOGNAME\fR is used to
 find a name in the \fI/etc/passwd\fR file, and through NIS, YP
 and LDAP.
@@ -75,7 +75,7 @@ The e\-mail address can either be specified with the -fB\-\-email\fR option
 or
 .B dh_make
 will attempt to find it. It will first check the environment variables
-\fB$DEBEMAIL\fR and then \fB$EMAIL. If they are not set then 
+\fB$DEBEMAIL\fR and then \fB$EMAIL. If they are not set then
 .B dh_make
 will search an available LDAP directory using
 .BR ldapsearch (1)
@@ -102,7 +102,7 @@ or custom.
 If this field is not specified the copyright file has a space to
 fill in which sort of license is used. The field is case-insensitive so
 \-c GPL works as well as \-c gpl. gpl and lgpl will give you version 3
-of the corresponding license, apache implies Apache v2.0. If you need a 
+of the corresponding license, apache implies Apache v2.0. If you need a
 different version, change the
 license file afterwards or use the gpl2 and lgpl2 options.  If you select
 custom here you will need to use the \fB\-\-copyrightfile\fR option as well.
@@ -113,6 +113,12 @@ your custom copyright file. \fBdh_make\fR will process this file just like
 the standard copyright files. It is suggested you use one of the existing
 license files as a starting point.
 .TP
+.B \-\-createorig
+Create new archive
+.I ../<packagename>\-<version>.orig.tar.gz
+from the contents of the current directory. Can not be used together with
+\fB\-\-native\fR nor \fB\-f\fR.
+.TP
 .B \-\-docs
 Create a separate \fIPACKAGE-doc\fR binary package. All found documents
 in the source package will be installed here.
@@ -122,7 +128,7 @@ Use \fIaddress\fR as the e\-mail address in the Maintainer: field of
 debian/control file.
 .TP
 .BR \-n ", " \-\-native
-Create a native Debian packages, i.e. do not generate a .orig archive, 
+Create a native Debian packages, i.e. do not generate a .orig archive,
 since it will be generated when building with dpkg-buildpackage.
 The version number will not have a Debian revision number (e.g. \-1)
 appended to it.
@@ -161,6 +167,12 @@ Skips applying the default templates to the target debian directory. Generally
 used in conjunction with either the \fB\-\-overlay\fR or \fB\-\-templates\fR
 options.
 .TP
+.BR \-\-with\-emacs\fR
+Add files for emacsen.
+.TP
+.BR \-\-python\fR
+Set package class to Python to generate additional Python packaging specific definitions.
+.TP
 .BR \-h ", " \-\-help
 Display the name, version, available options and authors, and exit
 successfully.
@@ -190,7 +202,7 @@ Default username used for looking up email and full name in other directories.
 .TP
 .I /usr/share/debhelper/dh_make
 Directory that contains all the template files, separated in six
-directories: 
+directories:
 .TP
 .I debian/
 with files for all package classes,
@@ -236,16 +248,20 @@ DEBFULLNAME="John Doe"
 .br
 dh_make \-\-email contact@example.com \-\-copyright=bsd \\
 .br
-\ \-\-file ../foo.tar.gz 
+\ \-\-file ../foo.tar.gz
 
 .fi
 .in
 .SH BUGS
-.B dh_make 
+.B dh_make
 may not detect your username and email address correctly when using sudo.
 .SH SEE ALSO
-.BR dpkg (1), dpkg\-buildpackage (1), dh (1), make\-kpkg (1), debhelper (7)
+.BR dpkg (1),
+.BR dpkg\-buildpackage (1),
+.BR dh (1),
+.BR make\-kpkg (1),
+.BR debhelper (7).
 .P
 You may also want to read the Debian Policy (in
-\fI/usr/share/doc/debian\-policy \fR) and the New Maintainers' Guide (in
+\fI/usr/share/doc/debian\-policy\fR) and the New Maintainers' Guide (in
 \fI/usr/share/doc/maint-guide\fR).

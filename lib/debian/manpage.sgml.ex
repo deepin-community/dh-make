@@ -1,8 +1,8 @@
 <!doctype refentry PUBLIC "-//OASIS//DTD DocBook V4.1//EN" [
 
 <!-- Process this file with docbook-to-man to generate an nroff manual
-     page: `docbook-to-man manpage.sgml > manpage.1'.  You may view
-     the manual page with: `docbook-to-man manpage.sgml | nroff -man |
+     page: 'docbook-to-man manpage.sgml > manpage.1'.  You may view
+     the manual page with: 'docbook-to-man manpage.sgml | nroff -man |
      less'.  A typical entry in a Makefile or Makefile.am is:
 
 manpage.1: manpage.sgml
@@ -87,7 +87,7 @@ manpage.1: manpage.sgml
     <title>OPTIONS</title>
 
     <para>These programs follow the usual &gnu; command line syntax,
-      with long options starting with two dashes (`-').  A summary of
+      with long options starting with two dashes ('-').  A summary of
       options is included below.  For a complete description, see the
       <application>Info</application> files.</para>
 

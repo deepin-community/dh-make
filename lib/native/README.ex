@@ -1,6 +1,6 @@
 The Debian Package #PACKAGE#
 ----------------------------
 
-Comments regarding the Package
+<Comments regarding the Package.>
 
  -- #USERNAME# <#EMAIL#>  #DATE#
